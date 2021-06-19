@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+$padding: calc(4vw + 2rem);
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+main {
+    padding: 0 $padding;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    background-color: rgb(241, 239, 239);
+    color: rgb(22, 21, 21);
+    section {
+        padding: 2rem;
+        h1 {
+            margin-bottom: 2rem;
+            font-size: clamp(2rem, 5vw, 8rem);
+        }
+        p {
+            font-size: clamp(1rem, 1.2vw, 2.5rem);
+        }
+    }
+    .cursor {
+        pointer-events: none;
+        display: none;
+        &__ball {
+            position: fixed;
+            top: 0;
+            left: 0;
+            mix-blend-mode: difference !important;
+            z-index: 1000;
+            circle {
+                    fill: #fdfdfd;
+            }
+        }
+    }
+}
